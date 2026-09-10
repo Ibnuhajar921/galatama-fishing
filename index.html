@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galatama Fishing - Tournament</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>FISHING TOURNAMENT</h1>
+                <span class="subtitle">GALATAMA</span>
+            </div>
+            <div class="header-right">
+                <div class="timer-wrapper">
+                    <span class="timer-label">TIME LEFT</span>
+                    <div id="timerDisplay">60s</div>
+                </div>
+                <div id="statusDisplay" class="status-waiting">Menunggu Mulai</div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>TOURNAMENT ARENA</h2>
+                <p>Siapa jadi juara hari ini?<br />Tarik napas, lempar kail, dan buktikan siapa pemancing terbaik.</p>
+            </div>
+            <div id="controls" class="controls-wrapper"></div>
+        </section>
+
+        <main class="main-content">
+            <section class="leaderboard-section">
+                <div class="section-header">
+                    <h3>LIVE RANKING</h3>
+                    <span class="badge-live">&#9679; LIVE</span>
+                </div>
+                <div class="leaderboard-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RANK</th>
+                                <th>PEMAIN</th>
+                                <th>TANGKAPAN</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="card biggest-catch-card">
+                    <div class="card-header">
+                        <span class="card-icon">&#9670;</span>
+                        <h4>BIGGEST CATCH</h4>
+                    </div>
+                    <div id="biggestCatchContainer" class="biggest-catch-content">
+                        <div class="empty-state">Belum ada tangkapan</div>
+                    </div>
+                </div>
+
+                <div class="card activity-card">
+                    <div class="card-header">
+                        <span class="card-icon">&#9679;</span>
+                        <h4>LIVE ACTIVITY</h4>
+                        <span class="badge-realtime">REAL-TIME</span>
+                    </div>
+                    <div id="activityContainer" class="activity-feed"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <div id="legendaryPopup" class="legendary-popup">
+        <div class="legendary-popup-content">
+            <span class="legendary-popup-icon">&#9670;</span>
+            <h2>LEGENDARY CATCH</h2>
+            <p id="legendaryPopupText">Bot 1 dapat 10.0 kg</p>
+            <span class="legendary-popup-sub">&#9733; TANGKAPAN SEMPURNA &#9733;</span>
+        </div>
+    </div>
+
+    <div id="toastPopup" class="toast-popup"></div>
+
+    <script src="js/state.js"></script>
+    <script src="js/gameLogic.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/toastManager.js"></script>
+    <script src="js/animationManager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
